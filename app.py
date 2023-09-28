@@ -49,7 +49,7 @@ def scrape_weather():
         # niftty_weather_tomorrow_0 = soup.select_one('#tomorrowWeather > table > tbody > tr + tr > td > img alt')
         
         # return city, weather, temperature
-        return yahoo_weather_today_0, yahoo_weather_today_3, yahoo_weather_today_6, yahoo_weather_today_9, yahoo_weather_today_12, yahoo_weather_today_15, yahoo_weather_today_18, yahoo_weather_today_21, yahoo_weather_tomorrow_0, niftty_weather_today_0
+        return yahoo_weather_today_0, yahoo_weather_today_3, yahoo_weather_today_6, yahoo_weather_today_9, yahoo_weather_today_12, yahoo_weather_today_15, yahoo_weather_today_18, yahoo_weather_today_21, niftty_weather_today_0, yahoo_weather_tomorrow_0
     else:
         return None, None, None
 
