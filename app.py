@@ -32,12 +32,14 @@ def scrape_weather():
         yahoo_weather_today_21 = soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text
         
         #明日の天気
+        
         yahoo_weather_tomorrow_0 = soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr > td + td > small').text
         yahoo_weather_tomorrow_3 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td > small').text
         yahoo_weather_tomorrow_6 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td > small').text
         yahoo_weather_tomorrow_9 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td > small').text
         yahoo_weather_tomorrow_12 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td > small').text
         yahoo_weather_tomorrow_15 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td > small').text
+        yahoo_weather_tomorrow_15 = yahoo_weather_tomorrow_15.replace("曇り","くもり")
         yahoo_weather_tomorrow_18 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td > small').text
         yahoo_weather_tomorrow_21 = soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text
         
