@@ -35,8 +35,7 @@ def scrape_weather():
         
         # "曇り" を "くもり" に置換
         for i in range(len(yahoo_weather_today)):
-            if yahoo_weather_today[i] == '曇り':
-                yahoo_weather_today[i] = 'くもり'
+            yahoo_weather_today[i] = yahoo_weather_today[i].replace('曇り', 'くもり')
     
         print(yahoo_weather_today)
 
@@ -56,8 +55,7 @@ def scrape_weather():
         
         # "曇り" を "くもり" に置換
         for i in range(len(yahoo_weather_tomorrow)):
-            if yahoo_weather_tomorrow[i] == '曇り':
-                yahoo_weather_tomorrow[i] = 'くもり'
+            yahoo_weather_tomorrow[i] = yahoo_weather_tomorrow[i].replace('曇り', 'くもり')
     
         print(yahoo_weather_tomorrow)
     # 新しい@niffty天気のURL（八代市の場合）
@@ -83,8 +81,7 @@ def scrape_weather():
 
         # "曇り" を "くもり" に置換
         for i in range(len(niftty_weather_today)):
-            if niftty_weather_today[i] == '曇り':
-                niftty_weather_today[i] = 'くもり'
+            niftty_weather_today[i] = niftty_weather_today[i].replace('曇り', 'くもり')
     
         print(niftty_weather_today)
 
@@ -101,9 +98,7 @@ def scrape_weather():
         
         # "曇り" を "くもり" に置換
         for i in range(len(niftty_weather_tomorrow)):
-            if niftty_weather_tomorrow[i] == '曇り':
-                niftty_weather_tomorrow[i] = 'くもり'
-    
+            niftty_weather_tomorrow[i] = niftty_weather_tomorrow[i].replace('曇り', 'くもり')
         print(niftty_weather_tomorrow)
 
         # 新しいお天気ナビゲーターのURL（八代市の場合）
@@ -116,37 +111,36 @@ def scrape_weather():
 
         # 天気情報を抽出
         navigater_weather_today = soup.findAll('p',attrs={'class':'box-weather-data-txt'})[0].text
-        if navigater_weather_today == '曇':
-            navigater_weather_today = 'くもり'
+        navigater_weather_today = navigater_weather_today.replace('曇り', 'くもり')
 
         navigater_weather_tommorow = soup.findAll('p',attrs={'class':'box-weather-data-txt'})[1].text
-        if navigater_weather_tommorow == '曇':
-            navigater_weather_tommorow = 'くもり'
+        navigater_weather_tommorow = navigater_weather_tommorow.replace('曇り', 'くもり')
         
         # 気象庁のURL（八代市の場合）
-        url = "https://www.jma.go.jp/bosai/forecast/#area_type=class20s&area_code=4320200"
+        url = "https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=430000"
         # ページのHTMLを取得
         response = requests.get(url)
         # if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # 天気情報を抽出
-        # kisyoutyou_weather_today = soup.find('td', class_="forecast-sentence").text
+        kisyoutyou_weather_today = soup.findAll('img')
+        print(kisyoutyou_weather_today)
 
         
         # return city, weather, temperature
-        return yahoo_weather_today, niftty_weather_today,navigater_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_today, dt_now
+        return yahoo_weather_today, niftty_weather_today,navigater_weather_today, kisyoutyou_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_today, dt_now
     else:
         return None, None, None
 
 @app.route('/')
 def index():
     # city, yahoo_weather_today_0, temperature = scrape_weather()
-    yahoo_weather_today, niftty_weather_today,  navigater_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_tomorrow, dt_now = scrape_weather()
+    yahoo_weather_today, niftty_weather_today,  navigater_weather_today, kisyoutyou_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_tomorrow, dt_now = scrape_weather()
     # if city and yahoo_weather_today_0 and temperature:
-    if yahoo_weather_today and niftty_weather_today and  navigater_weather_today and yahoo_weather_tomorrow and niftty_weather_tomorrow and navigater_weather_tommorow and dt_now:
+    if yahoo_weather_today and niftty_weather_today and  navigater_weather_today and kisyoutyou_weather_today and yahoo_weather_tomorrow and niftty_weather_tomorrow and navigater_weather_tommorow and dt_now:
         # return render_template('weather.html', city=city, yahoo_weather_today_0=yahoo_weather_today_0, temperature=temperature)
-        return render_template('weather.html', yahoo_weather_today=yahoo_weather_today, niftty_weather_today=niftty_weather_today, navigater_weather_today= navigater_weather_today,yahoo_weather_tomorrow=yahoo_weather_tomorrow, niftty_weather_tomorrow=niftty_weather_tomorrow, navigater_weather_tommorow=navigater_weather_tommorow, dt_now=dt_now)
+        return render_template('weather.html', yahoo_weather_today=yahoo_weather_today, niftty_weather_today=niftty_weather_today, navigater_weather_today= navigater_weather_today, kisyoutyou_weather_today=kisyoutyou_weather_today,yahoo_weather_tomorrow=yahoo_weather_tomorrow, niftty_weather_tomorrow=niftty_weather_tomorrow, navigater_weather_tommorow=navigater_weather_tommorow, dt_now=dt_now)
     else:
         error_message = "天気情報を取得できませんでした。"
         return render_template('error.html', error_message=error_message)
