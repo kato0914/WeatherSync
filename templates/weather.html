@@ -5,37 +5,135 @@
 </head>
 <body>
     <h1>八代市の天気</h1>
+    <h3>{{dt_now}}</h3>
     <table border="1">
+        <tr>
+            <td>今日</td>
+            <td>0時</td>
+            <td>3時</td>
+            <td>6時</td>
+            <td>9時</td>
+            <td>12時</td>
+            <td>15時</td>
+            <td>18時</td>
+            <td>21時</td>
+        </tr>
         <tr>
             <td>yahoo天気</td>
-            <td>0時</td>
-            <td>3時</td>
-            <td>6時</td>
-            <td>9時</td>
-            <td>12時</td>
-            <td>15時</td>
-            <td>18時</td>
-            <td>21時</td>
+            <td>
+                <img alt="yahoo_weather_today_0" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_0}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_0}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_3" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_3}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_3}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_6" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_6}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_6}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_9" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_9}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_9}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_12" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_12}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_12}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_15" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_15}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_15}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_18" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_18}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_18}}
+                </small>
+            </td>
+            <td>
+                <img alt="yahoo_weather_today_21" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today_21}}.png" width="75"/>
+                <small>
+                    {{yahoo_weather_today_21}}
+                </small>
+            </td>
         </tr>
         <tr>
-            <td>今日</td>
-            <td>{{yahoo_weather_today_0}}</td>
-            <td>{{yahoo_weather_today_3}}</td>
-            <td>{{yahoo_weather_today_6}}</td>
-            <td>{{yahoo_weather_today_9}}</td>
-            <td>{{yahoo_weather_today_12}}</td>
-            <td>{{yahoo_weather_today_15}}</td>
-            <td>{{yahoo_weather_today_18}}</td>
-            <td>{{yahoo_weather_today_21}}</td>
+
+            <td>niffty天気</td>
+            <td>
+                <img alt="niftty_weather_today_0" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_0}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_0}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_3" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_3}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_3}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_6" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_6}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_6}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_9" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_9}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_9}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_12" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_12}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_12}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_15" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_15}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_15}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_18" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_18}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_18}}
+                </small>
+            </td>
+            <td>
+                <img alt="niftty_weather_today_21" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today_21}}.png" width="75"/>
+                <small>
+                    {{niftty_weather_today_21}}
+                </small>
+            </td>
         </tr>
         <tr>
-            <td>明日</td>
-            <td>{{yahoo_weather_tomorrow_0}}</td>
+            <td>お天気ナビゲーター</td>
+            <td colspan="8" align="center">{{navigater_weather_today}}</td>
         </tr>
-    </table>  
+        <tr>
+            <td>気象庁</td>
+            <td colspan="8" align="center">{{kisyoutyou_weather_today}}</td>
+        </tr>
+    </table>
+    <br>
     <table border="1">
         <tr>
-            <td>niffty天気</td>
+            <td>明日</td>
             <td>0時</td>
             <td>3時</td>
             <td>6時</td>
@@ -46,19 +144,30 @@
             <td>21時</td>
         </tr>
         <tr>
-            <td>今日</td>
-            <td>{{niftty_weather_today_0}}</td>
-            <td>{{niftty_weather_today_3}}</td>
-            <td>{{niftty_weather_today_6}}</td>
-            <td>{{niftty_weather_today_9}}</td>
-            <td>{{niftty_weather_today_12}}</td>
-            <td>{{niftty_weather_today_15}}</td>
-            <td>{{niftty_weather_today_18}}</td>
-            <td>{{niftty_weather_today_21}}</td>
+            <td>yahoo天気</td>
+            <td>{{yahoo_weather_tomorrow_0}}</td>            
+            <td>{{yahoo_weather_tomorrow_3}}</td>
+            <td>{{yahoo_weather_tomorrow_6}}</td>
+            <td>{{yahoo_weather_tomorrow_9}}</td>
+            <td>{{yahoo_weather_tomorrow_12}}</td>
+            <td>{{yahoo_weather_tomorrow_15}}</td>
+            <td>{{yahoo_weather_tomorrow_18}}</td>
+            <td>{{yahoo_weather_tomorrow_21}}</td>
         </tr>
         <tr>
-            <td>明日</td>
+            <td>niffty天気</td>
             <td>{{niftty_weather_tomorrow_0}}</td>
+            <td>{{niftty_weather_tomorrow_3}}</td>
+            <td>{{niftty_weather_tomorrow_6}}</td>
+            <td>{{niftty_weather_tomorrow_9}}</td>
+            <td>{{niftty_weather_tomorrow_12}}</td>
+            <td>{{niftty_weather_tomorrow_15}}</td>
+            <td>{{niftty_weather_tomorrow_18}}</td>
+            <td>{{niftty_weather_tomorrow_21}}</td>
+        </tr>
+        <tr>
+            <td>お天気ナビゲーター</td>
+            <td colspan="8" align="center">{{navigater_weather_tommorow}}</td>
         </tr>
     </table> 
     <!-- <p>気温: {{ temperature }}</p> -->
