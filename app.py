@@ -2,6 +2,8 @@ from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+import urllib.request
+import urllib.parse
 
 app = Flask(__name__)
 
@@ -129,6 +131,20 @@ def scrape_weather():
         kisyoutyou_weather_today = soup.findAll('p')
         print(kisyoutyou_weather_today)
 
+
+        #天気予報APIのエントリーポイント
+        url = "https://www.jma.go.jp/bosai/forecast/data/forecast/430000.json"
+
+        print("url = ", url)
+
+        #データをリクエスト
+        data = urllib.request.urlopen(url).read()
+
+        #取得したバイナリデータをUTF-8にエンコード
+        text = data.decode("utf-8")
+
+        #テキストとして表示
+        print(text)
         
         # return city, weather, temperature
         return yahoo_weather_today, niftty_weather_today,navigater_weather_today, kisyoutyou_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_today, dt_now

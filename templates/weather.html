@@ -10,34 +10,7 @@
 </head>
 <body>
     <h1>八代市の天気</h1>
-    <p id="weather"></p>
     <h3>{{dt_now}}</h3>
-    <table>
-        <tr id="publishingOffice">
-            <th>発表者</th>
-            <td></td>
-        </tr>
-        <tr id="reportDatetime">
-            <th>報告日時</th>
-            <td></td>
-        </tr>
-        <tr id="targetArea">
-            <th>対象地域</th>
-            <td></td>
-        </tr>
-        <tr id="today">
-            <th>今日の天気</th>
-            <td></td>
-        </tr>
-        <tr id="tomorrow">
-            <th>明日の天気</th>
-            <td></td>
-        </tr>
-        <tr id="dayAfterTomorrow">
-            <th>明後日の天気</th>
-            <td></td>
-        </tr>
-    </table>
 
     <table border="1">
         <tr>
@@ -164,11 +137,17 @@
             </td>
         </tr>
         <tr>
-            <td>気象庁</td>
+            <td>気象庁<br><div id="location"><a href="https://www.jma.go.jp/bosai/forecast/" target="_blank"></a></div></td>
             <td colspan="8" align="center">
-                <img alt="kisyoutyou_weather_today" border="0" height="40" src="../static/img/{{kisyoutyou_weather_today}}.png" width="75"/>
+                <img class="kisyoutyou_weather_today" alt="kisyoutyou_weather_today" border="0" height="40" src="../static/img/{{kisyoutyou_weather_today}}.png" width="75"/>
                 <small>
-                    {{kisyoutyou_weather_today}}
+                    <div class="weatherForecast">
+                        <div class="weather">
+                          <!-- <div class="date">--/--(-)</div> -->
+                          <!-- <img class="weatherImg"> -->
+                          <div class="weatherTelop">--</div>
+                        </div>
+                    </div>
                 </small>
             </td>
         </tr>
@@ -299,5 +278,6 @@
         </tr>
     </table> 
     <!-- <p>気温: {{ temperature }}</p> -->
+    <script src="../static/js/weather.js"></script>
 </body>
 </html>
