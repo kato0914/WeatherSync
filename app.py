@@ -117,14 +117,14 @@ def scrape_weather():
         navigater_weather_tommorow = navigater_weather_tommorow.replace('曇り', 'くもり')
         
         # 気象庁のURL（八代市の場合）
-        url = "https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=430000"
+        url = "https://www.jma.go.jp/bosai/#pattern=forecast&area_type=class20s&area_code=4320200"
         # ページのHTMLを取得
         response = requests.get(url)
         # if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # 天気情報を抽出
-        kisyoutyou_weather_today = soup.findAll('img')
+        kisyoutyou_weather_today = soup.findAll('p')
         print(kisyoutyou_weather_today)
 
         

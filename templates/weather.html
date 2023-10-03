@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="js/main.js" async></script>
     <title>八代市の天気</title>
 </head>
 <body>
     <h1>八代市の天気</h1>
+    <p id="weather"></p>
     <h3>{{dt_now}}</h3>
+    <table>
+        <tr id="publishingOffice">
+            <th>発表者</th>
+            <td></td>
+        </tr>
+        <tr id="reportDatetime">
+            <th>報告日時</th>
+            <td></td>
+        </tr>
+        <tr id="targetArea">
+            <th>対象地域</th>
+            <td></td>
+        </tr>
+        <tr id="today">
+            <th>今日の天気</th>
+            <td></td>
+        </tr>
+        <tr id="tomorrow">
+            <th>明日の天気</th>
+            <td></td>
+        </tr>
+        <tr id="dayAfterTomorrow">
+            <th>明後日の天気</th>
+            <td></td>
+        </tr>
+    </table>
+
     <table border="1">
         <tr>
             <td>今日</td>
@@ -21,49 +54,49 @@
         <tr>
             <td>yahoo天気</td>
             <td>
-                <img alt="yahoo_weather_today[0]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[0]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[0]" border="0" height="40" src="../static/img/{{yahoo_weather_today[0]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[0]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[1]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[1]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[1]" border="0" height="40" src="../static/img/{{yahoo_weather_today[1]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[1]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[2]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[2]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[2]" border="0" height="40" src="../static/img/{{yahoo_weather_today[2]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[2]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[3]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[3]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[3]" border="0" height="40" src="../static/img/{{yahoo_weather_today[3]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[3]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[4]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[4]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[4]" border="0" height="40" src="../static/img/{{yahoo_weather_today[4]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[4]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[5]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[5]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[5]" border="0" height="40" src="../static/img/{{yahoo_weather_today[5]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[5]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[6]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[6]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[6]" border="0" height="40" src="../static/img/{{yahoo_weather_today[6]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[6]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_today[7]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_today[7]}}.png" width="75"/>
+                <img alt="yahoo_weather_today[7]" border="0" height="40" src="../static/img/{{yahoo_weather_today[7]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_today[7]}}
                 </small>
@@ -73,49 +106,49 @@
 
             <td>niffty天気</td>
             <td>
-                <img alt="niftty_weather_today[0]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[0]}}.png" width="75"/>
+                <img alt="niftty_weather_today[0]" border="0" height="40" src="../static/img/{{niftty_weather_today[0]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[0]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[1]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[1]}}.png" width="75"/>
+                <img alt="niftty_weather_today[1]" border="0" height="40" src="../static/img/{{niftty_weather_today[1]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[1]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[2]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[2]}}.png" width="75"/>
+                <img alt="niftty_weather_today[2]" border="0" height="40" src="../static/img/{{niftty_weather_today[2]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[2]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[3]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[3]}}.png" width="75"/>
+                <img alt="niftty_weather_today[3]" border="0" height="40" src="../static/img/{{niftty_weather_today[3]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[3]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[4]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[4]}}.png" width="75"/>
+                <img alt="niftty_weather_today[4]" border="0" height="40" src="../static/img/{{niftty_weather_today[4]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[4]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[5]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[5]}}.png" width="75"/>
+                <img alt="niftty_weather_today[5]" border="0" height="40" src="../static/img/{{niftty_weather_today[5]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[5]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[6]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[6]}}.png" width="75"/>
+                <img alt="niftty_weather_today[6]" border="0" height="40" src="../static/img/{{niftty_weather_today[6]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[6]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_today[7]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_today[7]}}.png" width="75"/>
+                <img alt="niftty_weather_today[7]" border="0" height="40" src="../static/img/{{niftty_weather_today[7]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_today[7]}}
                 </small>
@@ -124,7 +157,7 @@
         <tr>
             <td>お天気ナビゲーター</td>
             <td colspan="8" align="center">
-                <img alt="navigater_weather_today" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{navigater_weather_today}}.png" width="75"/>
+                <img alt="navigater_weather_today" border="0" height="40" src="../static/img/{{navigater_weather_today}}.png" width="75"/>
                 <small>
                     {{navigater_weather_today}}
                 </small>
@@ -133,7 +166,7 @@
         <tr>
             <td>気象庁</td>
             <td colspan="8" align="center">
-                <img alt="kisyoutyou_weather_today" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{kisyoutyou_weather_today}}.png" width="75"/>
+                <img alt="kisyoutyou_weather_today" border="0" height="40" src="../static/img/{{kisyoutyou_weather_today}}.png" width="75"/>
                 <small>
                     {{kisyoutyou_weather_today}}
                 </small>
@@ -156,49 +189,49 @@
         <tr>
             <td>yahoo天気</td>
             <td>
-                <img alt="yahoo_weather_tomorrow[0]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[0]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[0]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[0]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[0]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[1]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[1]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[1]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[1]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[1]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[2]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[2]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[2]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[2]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[2]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[3]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[3]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[3]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[3]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[3]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[4]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[4]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[4]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[4]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[4]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[5]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[5]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[5]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[5]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[5]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[6]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[6]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[6]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[6]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[6]}}
                 </small>
             </td>
             <td>
-                <img alt="yahoo_weather_tomorrow[7]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{yahoo_weather_tomorrow[7]}}.png" width="75"/>
+                <img alt="yahoo_weather_tomorrow[7]" border="0" height="40" src="../static/img/{{yahoo_weather_tomorrow[7]}}.png" width="75"/>
                 <small>
                     {{yahoo_weather_tomorrow[7]}}
                 </small>
@@ -207,49 +240,49 @@
         <tr>
             <td>niffty天気</td>
             <td>
-                <img alt="niftty_weather_tomorrow[0]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[0]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[0]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[0]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[0]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[1]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[1]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[1]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[1]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[1]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[2]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[2]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[2]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[2]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[2]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[3]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[3]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[3]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[3]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[3]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[4]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[4]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[4]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[4]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[4]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[5]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[5]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[5]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[5]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[5]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[6]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[6]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[6]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[6]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[6]}}
                 </small>
             </td>
             <td>
-                <img alt="niftty_weather_tomorrow[7]" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{niftty_weather_tomorrow[7]}}.png" width="75"/>
+                <img alt="niftty_weather_tomorrow[7]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[7]}}.png" width="75"/>
                 <small>
                     {{niftty_weather_tomorrow[7]}}
                 </small>
@@ -258,7 +291,7 @@
         <tr>
             <td>お天気ナビゲーター</td>
             <td colspan="8" align="center">
-                <img alt="navigater_weather_tommorow" border="0" height="40" src="../static/WeatherIconPack_png/Icons/{{navigater_weather_tommorow}}.png" width="75"/>
+                <img alt="navigater_weather_tommorow" border="0" height="40" src="../static/img/{{navigater_weather_tommorow}}.png" width="75"/>
                 <small>
                     {{navigater_weather_tommorow}}
                 </small>
