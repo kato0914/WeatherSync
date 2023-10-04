@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def scrape_weather():
 
-    dt_now = datetime.now().strftime("%Y年%m月%d%日%H時%M分%S秒現在")
+    dt_now = datetime.now().strftime("%m月%d%日 %H時%M分現在")
     print(dt_now)
 
 
