@@ -114,11 +114,11 @@ def scrape_weather():
         # 天気情報を抽出
         navigater_weather_today = soup.findAll('p',attrs={'class':'box-weather-data-txt'})[0].text
 
-        # navigater_weather_today = navigater_weather_today.replace('曇り', 'くもり')
+        navigater_weather_today = navigater_weather_today.replace('晴れ', '晴')
 
         navigater_weather_tommorow = soup.findAll('p',attrs={'class':'box-weather-data-txt'})[1].text
 
-        # navigater_weather_tommorow = navigater_weather_tommorow.replace('曇り', 'くもり')
+        navigater_weather_tommorow = navigater_weather_tommorow.replace('晴れ', '晴')
         
         # 気象庁のURL（八代市の場合）
         url = "https://www.jma.go.jp/bosai/#pattern=forecast&area_type=class20s&area_code=4320200"
