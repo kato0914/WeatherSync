@@ -168,19 +168,42 @@ const weatherCode = {
       const tempMin = document.getElementsByClassName("tempMin");
       const tempMax = document.getElementsByClassName("tempMax");
 
-      // img要素を作成
-      let img_element = document.createElement('img');
-      // img_element.src = '../static/img/' + weatherTelop[i] + '.png'; // 画像パス
-      img_element.src = '../static/img/晴.png'; // 画像パス
-      img_element.alt = 'kisyoutyou_weather_today'; // 代替テキスト
-      img_element.width = 75; // 横サイズ（px）
-      img_element.height = 40; // 縦サイズ（px）
+      // // // const weatherCodeValue = weatherCode[weatherTelop[0]][2].replace("曇り","曇").replace("後","のち");
 
-      // 指定した要素にimg要素を挿入
-      let content_area = document.getElementById("content_area");
-      content_area.appendChild(img_element);
+      // // // img要素を作成
+      // // let img_element = document.createElement('img');
+      // // // img_element.src = '../static/img/' + weatherTelop[i] + '.png'; // 画像パス
+      // // img_element.src = `../static/img/${weatherTelop}.png`; // 画像パス
+      // // img_element.alt = 'kisyoutyou_weather_today'; // 代替テキスト
+      // // img_element.width = 75; // 横サイズ（px）
+      // // img_element.height = 40; // 縦サイズ（px）
+
+      // // 指定した要素にimg要素を挿入
+      // let content_area = document.getElementById("content_area");
+      // content_area.appendChild(img_element);
+
+// HTMLコレクションから値を取得するためにループ処理を行います
+for (let i = 0; i < weatherTelop.length; i++) {
+  // 天気コードから天気の名称を取得
+  const weatherCodeValue = weatherCode[weatherCodeList[i]][2].replace("曇り","曇").replace("後","のち").replace("晴れ","晴");
+
+  // 天気情報を設定
+  weatherTelop[i].textContent = weatherCodeValue;
+
+  // img要素を作成
+  let img_element = document.createElement('img');
+
+  // 画像のパスを設定
+  img_element.src = `../static/img/${weatherCodeValue}.png`; // 画像パス
+  img_element.alt = 'kisyoutyou_weather_today'; // 代替テキスト
+  img_element.width = 75; // 横サイズ（px）
+  img_element.height = 40; // 縦サイズ（px）
+
+  // 指定した要素にimg要素を挿入
+  weatherTelop[i].appendChild(img_element);
+}
   
-      weatherCodeList.forEach(function (el, i) {
+      // weatherCodeList.forEach(function (el, i) {
         // let dt = new Date(timeDefinesList[i]);
         // let weekdayCount = dt.getDay();
         // if (weekdayCount === 0) date[i].style.color = "red";
@@ -190,8 +213,9 @@ const weatherCode = {
         // date[i].textContent = `${m}/${d}(${dayList[weekdayCount]})`;
         // var isNight = Number(i === 0 && !isTodaysData)
         // weatherImg[i].src = "https://www.jma.go.jp/bosai/forecast/img/" + weatherCode[el][isNight];
-        weatherTelop[i].textContent = weatherCode[el][2].replace("曇り","曇").replace("後","のち");
-        tempMin[i].textContent = tempsMinList[i] + "℃";
-        tempMax[i].textContent = tempsMaxList[i] + "℃";
-      });
+        // weatherTelop[i].textContent = weatherCode[el][2].replace("曇り","曇").replace("後","のち");
+        // tempMin[i].textContent = tempsMinList[i] + "℃";
+        // tempMax[i].textContent = tempsMaxList[i] + "℃";
+        
+      // });
     });
