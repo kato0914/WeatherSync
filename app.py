@@ -89,7 +89,6 @@ def scrape_weather():
 
         #明日の天気
         niftty_weather_tomorrow = []
-        niftty_weather_tomorrow.append(soup.findAll('img')[16].get('alt'))
         niftty_weather_tomorrow.append(soup.findAll('img')[17].get('alt'))
         niftty_weather_tomorrow.append(soup.findAll('img')[18].get('alt'))
         niftty_weather_tomorrow.append(soup.findAll('img')[19].get('alt'))
@@ -97,6 +96,7 @@ def scrape_weather():
         niftty_weather_tomorrow.append(soup.findAll('img')[21].get('alt'))
         niftty_weather_tomorrow.append(soup.findAll('img')[22].get('alt'))
         niftty_weather_tomorrow.append(soup.findAll('img')[23].get('alt'))
+        niftty_weather_tomorrow.append(soup.findAll('img')[24].get('alt'))
         
         # "曇り" を "くもり" に置換
         for i in range(len(niftty_weather_tomorrow)):
@@ -120,45 +120,19 @@ def scrape_weather():
 
         navigater_weather_tommorow = navigater_weather_tommorow.replace('晴れ', '晴').replace('くもり', '曇')
         
-        # 気象庁のURL（八代市の場合）
-        url = "https://www.jma.go.jp/bosai/#pattern=forecast&area_type=class20s&area_code=4320200"
-        # ページのHTMLを取得
-        response = requests.get(url)
-        # if response.status_code == 200:
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        # 天気情報を抽出
-        kisyoutyou_weather_today = soup.findAll('p')
-        print(kisyoutyou_weather_today)
-
-
-        #天気予報APIのエントリーポイント
-        url = "https://www.jma.go.jp/bosai/forecast/data/forecast/430000.json"
-
-        print("url = ", url)
-
-        #データをリクエスト
-        data = urllib.request.urlopen(url).read()
-
-        #取得したバイナリデータをUTF-8にエンコード
-        text = data.decode("utf-8")
-
-        #テキストとして表示
-        print(text)
-        
         # return city, weather, temperature
-        return yahoo_weather_today, niftty_weather_today,navigater_weather_today, kisyoutyou_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_today, dt_now
+        return yahoo_weather_today, niftty_weather_today, navigater_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_tomorrow, dt_now
     else:
         return None, None, None
 
 @app.route('/')
 def index():
     # city, yahoo_weather_today_0, temperature = scrape_weather()
-    yahoo_weather_today, niftty_weather_today,  navigater_weather_today, kisyoutyou_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_tomorrow, dt_now = scrape_weather()
+    yahoo_weather_today, niftty_weather_today,  navigater_weather_today, navigater_weather_tommorow, yahoo_weather_tomorrow, niftty_weather_tomorrow, dt_now = scrape_weather()
     # if city and yahoo_weather_today_0 and temperature:
-    if yahoo_weather_today and niftty_weather_today and  navigater_weather_today and kisyoutyou_weather_today and yahoo_weather_tomorrow and niftty_weather_tomorrow and navigater_weather_tommorow and dt_now:
+    if yahoo_weather_today and niftty_weather_today and  navigater_weather_today and yahoo_weather_tomorrow and niftty_weather_tomorrow and navigater_weather_tommorow and dt_now:
         # return render_template('weather.html', city=city, yahoo_weather_today_0=yahoo_weather_today_0, temperature=temperature)
-        return render_template('weather.html', yahoo_weather_today=yahoo_weather_today, niftty_weather_today=niftty_weather_today, navigater_weather_today= navigater_weather_today, kisyoutyou_weather_today=kisyoutyou_weather_today,yahoo_weather_tomorrow=yahoo_weather_tomorrow, niftty_weather_tomorrow=niftty_weather_tomorrow, navigater_weather_tommorow=navigater_weather_tommorow, dt_now=dt_now)
+        return render_template('weather.html', yahoo_weather_today=yahoo_weather_today, niftty_weather_today=niftty_weather_today, navigater_weather_today= navigater_weather_today, yahoo_weather_tomorrow=yahoo_weather_tomorrow, niftty_weather_tomorrow=niftty_weather_tomorrow, navigater_weather_tommorow=navigater_weather_tommorow, dt_now=dt_now)
     else:
         error_message = "天気情報を取得できませんでした。"
         return render_template('error.html', error_message=error_message)
