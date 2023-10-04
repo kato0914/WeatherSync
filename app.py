@@ -3,13 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import urllib.request
-import urllib.parse
+import urllib.parse, pytz
 
 app = Flask(__name__)
 
 def scrape_weather():
 
-    dt_now = datetime.now().strftime("%m月%d日 %H時%M分現在")
+    dt_now = datetime.now(pytz.timezone('Asia/Tokyo')).strftime("%m月%d日 %H時%M分現在")
     print(dt_now)
 
 
