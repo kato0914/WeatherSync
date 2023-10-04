@@ -202,6 +202,26 @@ const weatherCode = {
       // 指定した要素にimg要素を挿入
       let content_area = document.getElementById("content_area");
       content_area.appendChild(img_element);
+
+      const weatherTelopToday = document.getElementsByClassName("weatherTelopToday");
+
+      const weatherCodeValueToday = weatherCode[weatherCodeList[1]][2].replace("曇り","曇").replace("後","のち").replace("晴れ","晴");
+
+      // 天気情報を設定
+      weatherTelopToday[0].textContent = weatherCodeValueToday;
+
+      // img要素を作成
+      let img_element_today = document.createElement('img');
+
+      // 画像のパスを設定
+      img_element_today.src = `../static/img/${weatherCodeValueToday}.png`; // 画像パス
+      img_element_today.alt = 'kisyoutyou_weather_tommorow'; // 代替テキスト
+      img_element_today.width = 75; // 横サイズ（px）
+      img_element_today.height = 40; // 縦サイズ（px）
+
+      // 指定した要素にimg要素を挿入
+      let content_area_today = document.getElementById("content_area_today");
+      content_area_today.appendChild(img_element_today);
     // }
   
       // weatherCodeList.forEach(function (el, i) {
