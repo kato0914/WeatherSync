@@ -1,8 +1,20 @@
-td p{
-    float:right
+h3 {
+
+}
+
+h4 {
+    font-size: 14px;
+    margin: 0px;
 }
 
 img{
     margin: auto;
     display: block;
 }
+
+p{
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
