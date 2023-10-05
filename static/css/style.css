@@ -7,13 +7,15 @@
         display: inline-block; /* ブロック要素をインラインブロック要素に変更 */
         margin: 0; /* 余白をリセット */
         padding-top: 10px; /* 必要に応じて padding を設定 */
-        /* その他のスタイルを追加 */
+        font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Meiryo,"メイリオ","MS PGothic","ＭＳ Ｐゴシック",Helvetica,Arial,sans-serif;
     }
 
     h4 {
         font-size: 14px;
         margin: 0px;
     }
+
+    p, div 
 
     img{
         margin: auto;
