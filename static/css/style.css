@@ -28,6 +28,10 @@
         margin: 0px;
     }
 
+    .source{
+        text-align: left;
+    }
+
     #location{
         display: none;
     }
