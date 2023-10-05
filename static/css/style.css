@@ -1,116 +1,95 @@
-.container {
-    display: flex;
-    align-items: flex-end; /* 子要素を下揃えに配置 */
-  }
-  
-h3, h4 {
-    display: inline-block; /* ブロック要素をインラインブロック要素に変更 */
-    margin: 0; /* 余白をリセット */
-    padding-top: 10px; /* 必要に応じて padding を設定 */
-    /* その他のスタイルを追加 */
-}
+    .container {
+        display: flex;
+        align-items: flex-end; /* 子要素を下揃えに配置 */
+    }
+    
+    h3, h4 {
+        display: inline-block; /* ブロック要素をインラインブロック要素に変更 */
+        margin: 0; /* 余白をリセット */
+        padding-top: 10px; /* 必要に応じて padding を設定 */
+        /* その他のスタイルを追加 */
+    }
 
-h4 {
-    font-size: 14px;
-    margin: 0px;
-}
+    h4 {
+        font-size: 14px;
+        margin: 0px;
+    }
 
-img{
-    margin: auto;
-    display: block;
-}
+    img{
+        margin: auto;
+        display: block;
+    }
 
-p{
-    text-align: center;
-    font-size: 14px;
-    margin: 0px;
-}
+    p{
+        text-align: center;
+        font-size: 14px;
+        margin: 0px;
+    }
 
-#location{
-    display: none;
-}
+    #location{
+        display: none;
+    }
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
-        td{
-            white-space: nowrap; /* テキストが自動的に折り返されないように設定 */
+    h3, h4 {
+        padding-top: 1.041666666666667vw; /* 必要に応じて padding を設定 */
+        /* その他のスタイルを追加 */
+    }
+    
+    h4 {
+        font-size: 1.4583333333333vw;
+    }
+    
+    img{
+        margin: auto;
+        display: block;
+        height: 4.1666666666667vw;
+        width: 7.8125vw;
+    }
+
+    td{
+        white-space: nowrap; /* テキストが自動的に折り返されないように設定 */
+        padding: 0;
+    }
+
+    a {
+        display: block; /* リンクをブロック要素に変更して改行できるようにする */
         }
 
-        a {
-            display: block; /* リンクをブロック要素に変更して改行できるようにする */
-          }
+    p{
+        line-height: 2;
+        font-size: 1.4583333333333vw;
+    }
 
-        p{
-            line-height: 2;
-        }
-
-                /* スクロールバーを持つテーブルの親要素をスタイル */
-                [data-simplebar] {
-                    /* 必要な幅と高さを設定 */
-                    width: 100%;
-                    overflow-x: scroll; /* 横方向のスクロールバーを表示 */
-                    overflow-y: hidden; /* 縦方向のスクロールバーを非表示 */
-                }
-                
-                /* テーブルのスタイル（必要に応じてカスタマイズ） */
-                table {
-                    width: auto;
-                    height: 100%;
-                    border-collapse: collapse;
-                }
-                
-                table, th, td {
-                    border: 1px solid #ddd; /* テーブルの境界線を追加 */
-                    padding: 8px; /* セル内の余白を設定 */
-                    text-align: center; /* テキストを中央寄せに */
-                }
-                
-                /* テーブルヘッダの背景色やテキストスタイルを設定 */
-                th {
-                    background-color: #f2f2f2;
-                    font-weight: bold;
-          }
-        
+    .source{
+        font-size: 1.875vw;
+    }
 }
-@media screen and (max-width: 480px) {
-   	/* 480px以下に適用されるCSS（スマホ用） */
-        td{
-            white-space: nowrap; /* テキストが自動的に折り返されないように設定 */
-        }
 
-        a {
-            display: block; /* リンクをブロック要素に変更して改行できるようにする */
-          }
-
-        p{
-            line-height: 2;
-        }
-
-        /* スクロールバーを持つテーブルの親要素をスタイル */
-        [data-simplebar] {
-            /* 必要な幅と高さを設定 */
-            width: 100%;
-            overflow-x: scroll; /* 横方向のスクロールバーを表示 */
-            overflow-y: hidden; /* 縦方向のスクロールバーを非表示 */
-        }
-        
-        /* テーブルのスタイル（必要に応じてカスタマイズ） */
-        table {
-            width: auto;
-            height: 100%;
-            border-collapse: collapse;
-        }
-        
-        table, th, td {
-            border: 1px solid #ddd; /* テーブルの境界線を追加 */
-            padding: 8px; /* セル内の余白を設定 */
-            text-align: center; /* テキストを中央寄せに */
-        }
-        
-        /* テーブルヘッダの背景色やテキストスタイルを設定 */
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-  }
-  
+    /* スクロールバーを持つテーブルの親要素をスタイル */
+    [data-simplebar] {
+        /* 必要な幅と高さを設定 */
+        width: 100%;
+        overflow-x: scroll; /* 横方向のスクロールバーを表示 */
+        overflow-y: hidden; /* 縦方向のスクロールバーを非表示 */
+    }
+    
+    /* テーブルのスタイル（必要に応じてカスタマイズ） */
+    table {
+        width: auto;
+        height: 100%;
+        border-collapse: collapse;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd; /* テーブルの境界線を追加 */
+        text-align: center; /* テキストを中央寄せに */
+    }
+    
+    /* テーブルヘッダの背景色やテキストスタイルを設定 */
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
 }
+        
 
