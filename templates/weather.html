@@ -15,14 +15,15 @@
 </head>
 <body>
     <div class="container">
-        <h3>八代市の天気　</h3>
+        <h3>WeatherSync　</h3>
+        <h4>八代市の天気　</h4>
         <h4>{{dt_now}}</h4>
     </div>
 
     <div data-simplebar data-simplebar-auto-hide="false">
         <table border="1">
             <tr>
-                <th><p>今日</p></th>
+                <th><p>今日の天気</p></th>
                 <th><p>0時</p></th>
                 <th><p>3時</p></th>
                 <th><p>6時</p></th>
@@ -85,7 +86,7 @@
             </tr>
             <tr>
 
-                <td><div class="source">niffty天気</div></td>
+                <td><div class="source">niffty天気<br><a>(ウェザーニュース)</a></div></td>
                 <td>
                     <img alt="niftty_weather_today[0]" border="0" height="40" src="../static/img/{{niftty_weather_today[0]}}.png" width="75"/>
                     <p>
@@ -159,7 +160,7 @@
     <div data-simplebar data-simplebar-auto-hide="false">
         <table border="1">
             <tr>
-                <th><p>明日</p></th>
+                <th><p>明日の天気</p></th>
                 <th><p>0時</p></th>
                 <th><p>3時</p></th>
                 <th><p>6時</p></th>
@@ -221,7 +222,7 @@
                 </td>
             </tr>
             <tr>
-                <td><div class="source">niffty天気</div></td>
+                <td><div class="source">niffty天気<br><a>(ウェザーニュース)</a></div></td>
                 <td>
                     <img alt="niftty_weather_tomorrow[0]" border="0" height="40" src="../static/img/{{niftty_weather_tomorrow[0]}}.png" width="75"/>
                     <p>
@@ -274,9 +275,9 @@
             <tr>
                 <td><div class="source">お天気<br>ナビゲーター</div></td>
                 <td colspan="8">
-                    <img alt="navigater_weather_tommorow" border="0" height="40" src="../static/img/{{navigater_weather_tommorow}}.png" width="75"/>
+                    <img alt="navigater_weather_tomorrow" border="0" height="40" src="../static/img/{{navigater_weather_tomorrow}}.png" width="75"/>
                     <p>
-                        {{navigater_weather_tommorow}}
+                        {{navigater_weather_tomorrow}}
                     </p>
                 </td>
             </tr>
@@ -288,8 +289,297 @@
                         </article>
                         <p class="weatherTelopToday">--</p>
                 </td>
-
         </table>
+        <br>
+        <div>yahoo天気</div>
+        <table>
+            <tr>
+                <th><p>今日</p></th>
+                <th><p>0時</p></th>
+                <th><p>3時</p></th>
+                <th><p>6時</p></th>
+                <th><p>9時</p></th>
+                <th><p>12時</p></th>
+                <th><p>15時</p></th>
+                <th><p>18時</p></th>
+                <th><p>21時</p></th>
+            </tr>
+            <tr>
+                <td><div>気温</div></td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[0]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[1]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[2]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[3]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[4]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[5]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[6]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_today[7]}}℃
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><div>湿度</div></td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[0]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[1]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[2]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[3]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[4]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[5]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[6]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_today[7]}}%
+                    </p>
+                </td>
+            </tr>
+            <tr>
+            <td><div>降水量</div></td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[0]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[1]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[2]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[3]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[4]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[5]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[6]}}%
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{yahoo_precipitation_today[7]}}%
+                </p>
+            </td>
+            </tr>
+        </table>
+    
+        <br>
+        <table>
+            <tr>
+                <th><p>明日</p></th>
+                <th><p>0時</p></th>
+                <th><p>3時</p></th>
+                <th><p>6時</p></th>
+                <th><p>9時</p></th>
+                <th><p>12時</p></th>
+                <th><p>15時</p></th>
+                <th><p>18時</p></th>
+                <th><p>21時</p></th>
+            </tr>
+            <tr>
+                <td><div>気温</div></td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[0]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[1]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[2]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[3]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[4]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[5]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[6]}}℃
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_temp_tomorrow[7]}}℃
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><div>湿度</div></td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[0]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[1]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[2]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[3]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[4]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[5]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[6]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_humidity_tomorrow[7]}}%
+                    </p>
+                </td>
+            </tr>
+                <td><div>降水量</div></td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[0]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[1]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[2]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[3]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[4]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[5]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[6]}}%
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        {{yahoo_precipitation_tomorrow[7]}}%
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+
+
     </div> 
         </body>
     <!-- <p>気温: {{ temperature }}</p> -->
