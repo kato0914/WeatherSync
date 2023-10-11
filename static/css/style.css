@@ -68,7 +68,7 @@
         display: block; /* リンクをブロック要素に変更して改行できるようにする */
         }
 
-    p{
+    p, div, a{
         line-height: 2;
         font-size: 1.4583333333333vw;
     }
