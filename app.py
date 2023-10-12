@@ -1,11 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-import urllib.request
 import urllib.parse, pytz
 
 app = Flask(__name__)
+
+@app.route('/example')
+def example_route():
+    response = make_response(render_template('example.html'))
+    response.headers['Cache-Control'] = 'public, max-age=3600'  # キャッシュの有効期限を1時間に設定
+    return response
 
 def scrape_weather():
 
