@@ -30,106 +30,21 @@
             </tr>
             <tr>
                 <td><div class="source">yahoo天気</div></td>
-                <td>
-                    <img alt="yahoo_weather_today[0]" src="../static/img/{{yahoo_weather_today[0]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[0]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[1]" src="../static/img/{{yahoo_weather_today[1]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[1]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[2]" src="../static/img/{{yahoo_weather_today[2]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[2]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[3]" src="../static/img/{{yahoo_weather_today[3]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[3]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[4]" src="../static/img/{{yahoo_weather_today[4]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[4]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[5]" src="../static/img/{{yahoo_weather_today[5]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[5]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[6]" src="../static/img/{{yahoo_weather_today[6]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[6]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_today[7]" src="../static/img/{{yahoo_weather_today[7]}}.png"/>
-                    <p>
-                        {{yahoo_weather_today[7]}}
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <img alt="yahoo_weather_today[{{i}}]" src="../static/img/{{yahoo_weather_today[i]}}.png"/>
+                        <p>{{yahoo_weather_today[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
-
                 <td><div class="source">niffty天気<br>(ウェザーニュース)</div></td>
-                <td>
-                    <img alt="niftty_weather_today[0]" src="../static/img/{{niftty_weather_today[0]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[0]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[1]" src="../static/img/{{niftty_weather_today[1]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[1]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[2]" src="../static/img/{{niftty_weather_today[2]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[2]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[3]" src="../static/img/{{niftty_weather_today[3]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[3]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[4]" src="../static/img/{{niftty_weather_today[4]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[4]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[5]" src="../static/img/{{niftty_weather_today[5]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[5]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[6]" src="../static/img/{{niftty_weather_today[6]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[6]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_today[7]" src="../static/img/{{niftty_weather_today[7]}}.png"/>
-                    <p>
-                        {{niftty_weather_today[7]}}
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <img alt="niftty_weather_today[{{i}}]" src="../static/img/{{niftty_weather_today[i]}}.png"/>
+                        <p>{{niftty_weather_today[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td><div class="source">お天気<br>ナビゲーター</div></td>
@@ -167,105 +82,21 @@
             </tr>
             <tr>
                 <td><div class="source">yahoo天気</div></td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[0]" src="../static/img/{{yahoo_weather_tomorrow[0]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[0]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[1]" src="../static/img/{{yahoo_weather_tomorrow[1]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[1]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[2]" src="../static/img/{{yahoo_weather_tomorrow[2]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[2]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[3]" src="../static/img/{{yahoo_weather_tomorrow[3]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[3]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[4]" src="../static/img/{{yahoo_weather_tomorrow[4]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[4]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[5]" src="../static/img/{{yahoo_weather_tomorrow[5]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[5]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[6]" src="../static/img/{{yahoo_weather_tomorrow[6]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[6]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="yahoo_weather_tomorrow[7]" src="../static/img/{{yahoo_weather_tomorrow[7]}}.png"/>
-                    <p>
-                        {{yahoo_weather_tomorrow[7]}}
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <img alt="yahoo_weather_tomorrow[{{i}}]" src="../static/img/{{yahoo_weather_tomorrow[i]}}.png"/>
+                        <p>{{yahoo_weather_tomorrow[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td><div class="source">niffty天気<br>(ウェザーニュース)</div></td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[0]" src="../static/img/{{niftty_weather_tomorrow[0]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[0]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[1]" src="../static/img/{{niftty_weather_tomorrow[1]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[1]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[2]" src="../static/img/{{niftty_weather_tomorrow[2]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[2]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[3]" src="../static/img/{{niftty_weather_tomorrow[3]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[3]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[4]" src="../static/img/{{niftty_weather_tomorrow[4]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[4]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[5]" src="../static/img/{{niftty_weather_tomorrow[5]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[5]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[6]" src="../static/img/{{niftty_weather_tomorrow[6]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[6]}}
-                    </p>
-                </td>
-                <td>
-                    <img alt="niftty_weather_tomorrow[7]" src="../static/img/{{niftty_weather_tomorrow[7]}}.png"/>
-                    <p>
-                        {{niftty_weather_tomorrow[7]}}
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <img alt="niftty_weather_tomorrow[{{i}}]" src="../static/img/{{niftty_weather_tomorrow[i]}}.png"/>
+                        <p>{{niftty_weather_tomorrow[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td><div class="source">お天気<br>ナビゲーター</div></td>
@@ -301,132 +132,27 @@
             </tr>
             <tr>
                 <td><div>気温</div></td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[0]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[1]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[2]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[3]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[4]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[5]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[6]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_today[7]}}℃
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_temp_today[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td><div>湿度</div></td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[0]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[1]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[2]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[3]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[4]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[5]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[6]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_today[7]}}%
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_humidity_today[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
-            <td><div>降水量　</div></td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[0]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[1]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[2]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[3]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[4]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[5]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[6]}}%
-                </p>
-            </td>
-            <td>
-                <p>
-                    {{yahoo_precipitation_today[7]}}%
-                </p>
-            </td>
+                <td><div>降水量　</div></td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_precipitation_today[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
         </table>
     
@@ -445,131 +171,26 @@
             </tr>
             <tr>
                 <td><div>気温</div></td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[0]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[1]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[2]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[3]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[4]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[5]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[6]}}℃
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_temp_tomorrow[7]}}℃
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_temp_tomorrow[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td><div>湿度</div></td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[0]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[1]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[2]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[3]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[4]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[5]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[6]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_humidity_tomorrow[7]}}%
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_humidity_tomorrow[i]}}</p>
+                    </td>
+                {% endfor %}
             </tr>
                 <td><div>降水量</div></td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[0]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[1]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[2]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[3]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[4]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[5]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[6]}}%
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        {{yahoo_precipitation_tomorrow[7]}}%
-                    </p>
-                </td>
+                {% for i in range(8) %}
+                    <td>
+                        <p>{{yahoo_precipitation_tomorrow[1]}}%</p>
+                    </td>
+                {% endfor %}
             </tr>
         </table>
 
