@@ -17,14 +17,14 @@
 
     table{
         border:1;
-        height: 40;
-        width: 75;
     }
 
     img{
         margin: auto;
         display: block;
         border: 0;
+        height: 40px;
+        width: 75px;
     }
 
     td{
