@@ -30,15 +30,16 @@ def scrape_weather():
         # city = soup.find('h1', class_='yjw_cityname').text.strip()
         #今日の天気
 
-        yahoo_weather_today = []
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_weather_today.append(soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_weather_today = [
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         
         # "曇り" を "くもり" に置換
         for i in range(len(yahoo_weather_today)):
@@ -49,16 +50,16 @@ def scrape_weather():
         
         #明日の天気
 
-        yahoo_weather_tomorrow = []
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr > td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr > td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_weather_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_weather_tomorrow = [
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table >tbody > tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         
         # "曇り" を "くもり" に置換
         for i in range(len(yahoo_weather_tomorrow)):
@@ -67,75 +68,81 @@ def scrape_weather():
         print(yahoo_weather_tomorrow)
 
         # 今日の気温
-        yahoo_temp_today = []
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_temp_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_temp_today = [
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_temp_today)
 
         # 明日の気温
-        yahoo_temp_tomorrow = []
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_temp_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_temp_tomorrow = [
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_temp_tomorrow)
 
         # 今日の湿度
-        yahoo_humidity_today = []
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_humidity_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_humidity_today = [
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_humidity_today)
 
         # 明日の湿度
-        yahoo_humidity_tomorrow = []
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_humidity_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_humidity_tomorrow = [
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_humidity_tomorrow)
 
         # 今日の降水量
-        yahoo_precipitation_today = []
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_precipitation_today.append(soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_precipitation_today = [
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_today > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_precipitation_today)
 
         # 明日の降水量
-        yahoo_precipitation_tomorrow = []
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text)
-        yahoo_precipitation_tomorrow.append(soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text)
+        yahoo_precipitation_tomorrow = [
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td > small').text,
+        soup.select_one('#yjw_pinpoint_tomorrow > table > tbody > tr + tr + tr + tr + tr > td + td + td + td + td + td + td + td + td > small').text,
+        ]
         print(yahoo_precipitation_tomorrow)
 
         
@@ -150,15 +157,16 @@ def scrape_weather():
         # 天気情報を抽出
         # city = soup.find('h1', class_='yjw_cityname').text.strip()
         #今日の天気
-        niftty_weather_today = []
-        niftty_weather_today.append(soup.findAll('img')[8].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[9].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[10].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[11].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[12].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[13].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[14].get('alt'))
-        niftty_weather_today.append(soup.findAll('img')[15].get('alt'))
+        niftty_weather_today = [
+        soup.findAll('img')[8].get('alt'),
+        soup.findAll('img')[9].get('alt'),
+        soup.findAll('img')[10].get('alt'),
+        soup.findAll('img')[11].get('alt'),
+        soup.findAll('img')[12].get('alt'),
+        soup.findAll('img')[13].get('alt'),
+        soup.findAll('img')[14].get('alt'),
+        soup.findAll('img')[15].get('alt'),
+        ]
 
         # "曇り" を "くもり" に置換
         for i in range(len(niftty_weather_today)):
@@ -167,15 +175,16 @@ def scrape_weather():
         print(niftty_weather_today)
 
         #明日の天気
-        niftty_weather_tomorrow = []
-        niftty_weather_tomorrow.append(soup.findAll('img')[17].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[18].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[19].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[20].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[21].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[22].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[23].get('alt'))
-        niftty_weather_tomorrow.append(soup.findAll('img')[24].get('alt'))
+        niftty_weather_tomorrow = [
+        soup.findAll('img')[17].get('alt'),
+        soup.findAll('img')[18].get('alt'),
+        soup.findAll('img')[19].get('alt'),
+        soup.findAll('img')[20].get('alt'),
+        soup.findAll('img')[21].get('alt'),
+        soup.findAll('img')[22].get('alt'),
+        soup.findAll('img')[23].get('alt'),
+        soup.findAll('img')[24].get('alt'),
+        ]
         
         # "曇り" を "くもり" に置換
         for i in range(len(niftty_weather_tomorrow)):
